@@ -3,7 +3,7 @@ var i= 0;
 
 
 window.onload = function() {
-	document.getElementById("end").onmouseover = endGame;
+	document.getElementById("end").onmouseover = end;
 	document.getElementById("start").onclick = startGame;
 	var boundary = document.querySelectorAll("div#maze div.boundary");
 	for(i = 0; i < boundary.length; i++) {
@@ -34,3 +34,8 @@ function startGame() {
 }
 
 
+function end() {
+	if(loser === false) {
+		document.getElementById("status").textContent = "YOU WON!!!  ";
+	}
+}
